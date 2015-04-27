@@ -13,7 +13,7 @@ dir(sqlCtx)
 # load a json file directly into a dataframe
 reviews = sqlCtx.jsonFile("/Users/elliottcordo/Projects/Caserta/spark-techcon15/data/yelp/yelp_academic_dataset_review.json")
 # this could have been pulled from S3 or HDFS as well:
-# lines=sqlCtx.jsonFile("s3n://aws_id:aws_secret_key@caserta-public/yelp-academic-dataset/yelp_academic_dataset_review.json")
+# reviews = sqlCtx.jsonFile("s3n://aws_id:aws_secret_key@caserta-public/yelp-academic-dataset/yelp_academic_dataset_review.json")
 
 # how many partitions do we have?
 reviews.rdd.getNumPartitions()
