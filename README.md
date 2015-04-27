@@ -7,11 +7,13 @@ http://www.bigdatatechcon.com
 
 We plan to run the exercises on your local machine.  We will have printed copies of the Python code to follow along in PySpark, so long as you don't mind typing.  Also included is a iPython notebook (version 3.0.0)  which can be stepped through if you install and configure IPython and configure it to execute on via PySpark.  
 
-Below are the prerequisites:
+#Below are the prerequisites:
 
 
 ##Install Apache Spark:
-* Mac homebrew users can use brew instal apache-spark.  
+Aside from being a prerequisite for the class exercise, having a working local version of Spark on your local machine is important if you plan on doing any discovery, or development with Spark (in other words a very worthwile effort):
+
+* Mac homebrew users can use `brew install apache-spark`.  
 * Linux and Windows users can install/build based on the following guide: https://spark.apache.org/docs/latest/index.html
 
 ##Download the Data:
