@@ -199,7 +199,7 @@ business.saveAsParquetFile("/Users/elliottcordo/Projects/Caserta/spark-techcon15
 
 # In[ ]:
 
-business2 = sqlCtx.parquetFile("/Users/elliottcordo/Projects/Caserta/spark-techcon15/data/yelp/yelp_academic_dataset_business.parq")
+business2 = sqlCtx.parquetFile("/Users/elliottcordo/Projects/Caserta/spark-techcon15/data/yelp/business2.parq")
 
 business2.count()
 
