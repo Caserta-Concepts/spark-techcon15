@@ -33,6 +33,11 @@ dir(sqlCtx)
 reviews = sqlCtx.jsonFile("/Users/elliottcordo/Projects/Caserta/spark-techcon15/data/yelp/yelp_academic_dataset_review.json")
 
 
+# In[ ]:
+
+dir(reviews)
+
+
 # how many partitions do we have?
 
 # In[ ]:
@@ -178,5 +183,28 @@ sql = """
       group by b.name) a
     order by cnt desc"""
 
-sqlCtx.sql(sql).take(5)
+good_business = sqlCtx.sql(sql)
+
+good_business.take(5)
+
+
+# save data to parquet
+
+# In[ ]:
+
+business.saveAsParquetFile("/Users/elliottcordo/Projects/Caserta/spark-techcon15/data/yelp/business2.parq")
+
+
+# load and check data
+
+# In[ ]:
+
+business2 = sqlCtx.parquetFile("/Users/elliottcordo/Projects/Caserta/spark-techcon15/data/yelp/yelp_academic_dataset_business.parq")
+
+business2.count()
+
+
+# In[ ]:
+
+business2.printSchema()
 
